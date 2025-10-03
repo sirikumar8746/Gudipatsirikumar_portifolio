@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | Gudipati Siri Kumar</title>
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* =========================
+       Modal Image Viewer
+    ========================= */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 2000; /* On top of everything */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.85);
+    }
+
+    .modal-content {
+      margin: 5% auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #ffcc00;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="display: none">ABOUT GUDIPATI SIRI KUMAR</h1>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Gudipati Siri Kumar</div>
+    <ul class="nav-links">
+      <li><a href="portifolio.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am Gudipati Siri Kumar, an Information Technology undergraduate with a passion for learning, 
+      software development, and creative pursuits. I actively participate in cultural, sports, and social activities, 
+      earning recognition through various certificates and awards.
+    </p>
+
+    <!-- Certificates Section -->
+    <h3>Certificates & Achievements</h3>
+
+    <!-- Mahotsav 2023 -->
+    <h4>National Level Youth Festival - Mahotsav 2023</h4>
+    <p>Served as a volunteer in Stage and management at Vignan Mahotsav 2023.</p>
+    <div class="certificates">
+      <div class="certificate"><img src="images/mahotsav2023_1.jpg" alt="Mahotsav 2023 Certificate"></div>
+    </div>
+
+    <!-- SAC 2022-23 -->
+    <h4>Student Activities Council (SAC) 2022-23</h4>
+    <p>Volunteered in Stage & Management for SAC events, coordinating activities for academic year 2022-23.</p>
+    <div class="certificates">
+      <div class="certificate"><img src="images/sac2022.jpg" alt="SAC Certificate"></div>
+    </div>
+
+    <!-- Mahotsav 2025 -->
+    <h4>Vignan Mahotsav 2025</h4>
+    <p>Served as Lead for Fine Arts competitions and successfully managed over 15 participants with 200+ attendees.</p>
+    <div class="certificates">
+      <div class="certificate"><img src="images/mahotsav2025.jpg" alt="Mahotsav 2025 Certificate"></div>
+    </div>
+
+    <!-- Engineers Day 2023 -->
+    <h4>Engineer's Day Celebrations 2023</h4>
+    <p>Participated in Poster Presentation as part of Engineers' Day 2023 at VFSTR.</p>
+    <div class="certificates">
+      <div class="certificate"><img src="images/engineers_day2023.jpg" alt="Engineers Day Certificate"></div>
+    </div>
+
+    <!-- Engineers Day 2024 -->
+    <h4>Engineer's Day Celebrations 2024</h4>
+    <p>Secured <strong>2nd Prize</strong> in competitions during Engineers' Day 2024 at VFSTR.</p>
+
+    <!-- Smart Shopping Cart Project -->
+    <h4>Smart Shopping Cart Using RFID</h4>
+    <p>
+      <strong>Role:</strong> IoT Systems Programmer | Aug 2024 – Sep 2024<br>
+      Developed a smart cart prototype using Arduino UNO, an RFID reader, and an LCD display, reducing manual billing entry by ~40%. 
+      Automated real-time pricing and scanning for over 100 trial users. Demonstrated the prototype to 500+ attendees, ensuring reliability and secure data handling.
+    </p>
+
+    <!-- VEAC Volunteer -->
+    <h4>Vignan Extension Activities (VEAC)</h4>
+    <p>Completed 30 hours of volunteer participation in VEAC for the year 2024-2025.</p>
+    <div class="certificates">
+      <div class="certificate"><img src="images/veac.jpg" alt="VEAC Certificate"></div>
+    </div>
+
+    <!-- Dussehra Celebration -->
+    <h4>Dussehra Celebrations</h4>
+    <p>Coordinated in Dussehra celebrations at VFSTR.</p>
+    <div class="certificates">
+      <div class="certificate"><img src="images/dussehra.jpg" alt="Dussehra Certificate"></div>
+    </div>
+
+    <!-- Mahotsav 2024 Participation -->
+    <h4>Vignan Mahotsav 2024</h4>
+    <p>Participated in Cultural, Group Dance events.</p>
+    <div class="certificates">
+      <div class="certificate"><img src="images/mahotsav2024.jpg" alt="Mahotsav 2024 Participation"></div>
+    </div>
+
+    <!-- World Environment Day 2023 -->
+    <h4>World Environment Day 2023</h4>
+    <p>Secured 1st position in Essay Writing contest and 3rd position in Quiz contest organized by CEPC, VFSTR.</p>
+    <div class="certificates">
+      <div class="certificate"><img src="images/environment_day1.jpg" alt="Environment Day Certificate"></div>
+    </div>
+
+    <!-- Personal Traits -->
+    <h3>Personal Traits</h3>
+    <ul class="about-points">
+      <li>Communicative and confident in both academic and social settings.</li>
+      <li>Leadership qualities demonstrated through event coordination and team management.</li>
+      <li>Problem-solving mindset with a focus on innovation and creativity.</li>
+      <li>Passionate about cultural, sports, and technical activities.</li>
+    </ul>
+  </section>
+
+  <!-- Modal Viewer -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg" />
+  </div>
+
+  <script>
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".certificate img").forEach((img) => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
